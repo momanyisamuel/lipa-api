@@ -5,7 +5,7 @@ const app = express()
 const PORT = process.env.PORT || 3000
 app.get('/', async (req, res) => {
     console.log("Just got a request!")
-    const product = await ProductModel.findAll()
+    const product = await ProductModel.find()
     if(product) {
         res.send({product})
     }

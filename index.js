@@ -2,6 +2,7 @@ const express = require('express')
 const connect = require("./utils/db")
 let ProductModel = require('./models/product');
 const app = express()
+app.use(express.json())
 const PORT = process.env.PORT || 3000
 app.get('/', async (req, res) => {
     const product = await ProductModel.find()

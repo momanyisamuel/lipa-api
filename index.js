@@ -13,7 +13,9 @@ app.all('/', async (req, res) => {
         stock: '100',
         img: 'test'
     })
-    res.send({product})
+    if(product) {
+        res.send({product})
+    }
 })
 app.listen(PORT, async () => {
     await connect()

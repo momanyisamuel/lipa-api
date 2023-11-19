@@ -10,6 +10,7 @@ app.get('/', async (req, res) => {
     }
 })
 app.post('/products', async (req, res) => {
+    console.log(req.body)
     const product = new ProductModel({
         name: req.body.name,
         price: req.body.price,
